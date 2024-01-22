@@ -13,13 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- remix icon cnd  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- tailwind custom style-->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'primary-color': '#FF4240',
+                        'title': '#131318',
                     }
                 }
             }
@@ -32,14 +35,117 @@
     </style>
 </head>
 
-<body>
-    <nav>
-
+<body class="font-manrope">
+    <nav class="container mx-auto my-5">
+        <div class="navbar">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-4xl font-extrabold">Hockey<span class="text-primary-color">’</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li class="text-primary-color font-bold"><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end space-x-3">
+                <i class="ri-search-line hidden lg:flex"></i>
+                <a class="btn bg-primary-color text-white">Get Ticket</a>
+            </div>
+        </div>
     </nav>
-    <header>
-
+    <!-- banner section -->
+    <header class="container mx-auto mb-10">
+        <div class="carousel w-full lg:h-[90vh]">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="images/1.png" alt="" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="images/2.png" alt="" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="images/3.png" alt="" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="images/4.png" alt="" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+        <!-- meet heros section in slide bar -->
+        <div class="flex justify-end  lg:-translate-x-5 lg:-translate-y-48">
+            <div class="lg:w-2/5 bg-title text-white space-y-3 p-8 rounded-lg">
+                <h3 class="text-2xl font-extrabold">Meet all the heroes from the field</h3>
+                <p class="text-gray-400 font-medium">Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                    turpis placerat dolor. Purus urna in sit
+                    nullam proin.</p>
+            </div>
+        </div>
     </header>
-    <main>
+    <main class="container mx-auto">
+        <!-- professional hockeys section -->
+        <section>
+            <div class="text-center lg:-translate-y-14 border-dashed border-b-2 px-4 lg:px-0">
+                <h3 class="text-title text-2xl lg:text-4xl font-extrabold">Professional Hockeys Club</h3>
+                <p class="lg:w-1/2 mx-auto font-semibold text-gray-500 pb-5">Dit amet consectetur. Condimentum dignissim
+                    adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:px-10 space-y-5 lg:space-y-0 pt-5 lg:pt-0">
+                <div class="text-center">
+                    <div class="radial-progress text-red-600" style="--value:87;" role="progressbar ">87%</div>
+                    <h3 class="text-title text-xl font-semibold ">Prayer Facility</h3>
+                    <p class="text-gray-500 px-12 lg:px-0">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+                <div class="text-center">
+                    <div class="radial-progress text-green-500" style="--value:95;" role="progressbar">95%</div>
+                    <h3 class="text-title text-xl font-semibold ">Prayer Facility</h3>
+                    <p class="text-gray-500 px-12 lg:px-0">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+                <div class="text-center">
+                    <div class="radial-progress text-amber-500" style="--value:90;" role="progressbar">90%</div>
+                    <h3 class="text-title text-xl font-semibold ">Prayer Facility</h3>
+                    <p class="text-gray-500 px-12 lg:px-0">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+                <div class="text-center">
+                    <div class="radial-progress text-blue-500" style="--value:80;" role="progressbar">80%</div>
+                    <h3 class="text-title text-xl font-semibold ">Prayer Facility</h3>
+                    <p class="text-gray-500 px-12 lg:px-0">Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
